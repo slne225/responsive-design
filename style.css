@@ -1,3 +1,4 @@
+    /* border: 2px solid red; */
 body {
     color:white;
     background-color: black;
@@ -11,6 +12,7 @@ h1 {
 h2 {
     font-size: 16px;
     text-align: center;
+    margin: 0 auto;
 }
   
 .container {
@@ -20,7 +22,6 @@ h2 {
     width: 300px;
     box-shadow: 5px 5px 0 orange;
 }
-  
 .box {
     background-color: dodgerblue;
     height: 100px;
@@ -32,14 +33,20 @@ h2 {
     display: flex;
     align-content: center;
 }
-
 .button {
     background-color: dodgerblue;
     color: white;
     box-shadow: 2px 2px 0 orange;
-    height: 30px;
+    height: 50px;
     width: 150px;
 }
-.inline-flex h2 {
-    margin: 0 auto;
+
+#button-container {
+    display: flex;
+}
+#justify-content-container {
+    display: flex;
+    justify-content: none;
+    height: 500px;
+    width: 100%;
 }
