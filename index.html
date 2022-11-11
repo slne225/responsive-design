@@ -9,42 +9,30 @@
 </head>
 <body>
     <h1>flexbox tutorial</h1>
-    <button id="flex-button"><h3 id="flex-button">display: flex</h3></button>
-    
-    <div class="container" id="flex">
-        <div class="box">
-            <div class="nest">
-                <h2>1</h2>
+    <button id="flexbutton" class="button">display: flex</button>
+    <div class="flex-container">
+        <div class="container" id="flex">
+            <div class="box">
+                <div class="nest">
+                    <h2>1</h2>
+                </div>
             </div>
-        </div>
-        <div class="box">
-            <div class="nest">
-                <h2>2</h2>
+            <div class="box">
+                <div class="nest">
+                    <h2>2</h2>
+                </div>
             </div>
-        </div>
-        <div class="box">
-            <div class="nest">
-                <h2>3</h2>
+            <div class="box">
+                <div class="nest">
+                    <h2>3</h2>
+                </div>
             </div>
         </div>
     </div>
-    <h3>display: block</h3>
-    <div class="container" id="block">
-        <div class="box">
-            <div class="nest">
-                <h2>1</h2>
-            </div>
-        </div>
-        <div class="box">
-            <div class="nest">
-                <h2>2</h2>
-            </div>
-        </div>
-        <div class="box">
-            <div class="nest">
-                <h2>2</h2>
-            </div>
-        </div>
+    <button class="button" id="inlinebutton">display: block</button>
+    <div class="flex-container">
+        <div class="inline-flex container"><h2>1</h2></div>
+        <div class="inline-flex container"><h2>2</h2></div>
     </div>
     <script src="responsive.js"></script>
 </body>
