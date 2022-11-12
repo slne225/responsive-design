@@ -25,10 +25,12 @@ h2 {
 }
 .box {
     background-color: dodgerblue;
-    min-height: 6rem;
+    height: 6rem;
     width: 6rem;
     border: 1px solid orange;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #flex {
     display: flex;
@@ -50,6 +52,7 @@ h2 {
     justify-content: none;
     align-items: none;
     width: 75%;
+    height: 305px;
 }
 hr {
     width: 85%;
@@ -62,6 +65,34 @@ a {
     background-color: dodgerblue;
     color: white;
     box-shadow: 2px 2px 0 orange;
+}
+.middle {
+    height: 100px;
+    width: 100px;
+    border: 5px solid turquoise;
+  }
+#flex-adjust {
+    display: flex;
+    background-color: darkgrey;
+    justify-content: center;
+    min-height: 200px;
+    align-items: center;
+}
+/* .left {
+    flex-shrink: 3;
+    flex-basis: 300px;
+}
+.center {
+    flex-shrink: 1;
+    flex-basis: 300px;
+    
+}
+.right {
+    flex-shrink: 3;
+    flex-basis: 300px;
+} */
+#grow-shrink-center {
+    background-color: dodgerblue;
 }
 @media screen and (max-width: 450px) {
     .box {
@@ -76,9 +107,8 @@ a {
         height: 33px;
         width: 33px;
     }
+    .middle {
+        height: 66px;
+        width: 66px;
+    }
 }
-.middle {
-    height: 100px;
-    width: 100px;
-    border: 5px solid turquoise;
-  }

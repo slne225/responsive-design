@@ -176,3 +176,62 @@ flexstartalign.addEventListener('click', flexstartalignfunction)
 flexendalign.addEventListener('click', flexendalignfunction)
 centeralign.addEventListener('click', flexcenteralignfunction)
 baseline.addEventListener('click', baselinefunction)
+
+//grow and shrink section
+const leftbox = document.getElementById('grow-shrink-left')
+const centerbox = document.getElementById('grow-shrink-center')
+const rightbox = document.getElementById('grow-shrink-right')
+const growbutton = document.getElementById('grow-button')
+const shrinkbutton = document.getElementById('shrink-button')
+const resetbutton = document.getElementById('reset')
+
+function growfunction() {
+    if (growbutton.style.backgroundColor = 'dodgerblue'){
+        centerbox.style.flexGrow = '3';
+        leftbox.style.flexGrow = '1';
+        rightbox.style.flexGrow = '1';
+        growbutton.style.backgroundColor = 'orange';
+        shrinkbutton.style.backgroundColor = 'dodgerblue';
+        centerbox.style.flexShrink = '0';
+        leftbox.style.flexShrink = '0';
+        rightbox.style.flexShrink = '0';
+        leftbox.style.flexBasis = '0'
+        rightbox.style.flexBasis = '0'
+        centerbox.style.flexBasis = '0'
+    }
+}
+function shrinkfunction() {
+    if (shrinkbutton.style.backgroundColor = 'dodgerblue'){
+        centerbox.style.flexShrink = '1';
+        leftbox.style.flexShrink = '3';
+        rightbox.style.flexShrink = '3';
+        shrinkbutton.style.backgroundColor = 'orange';
+        growbutton.style.backgroundColor = 'dodgerblue';
+        centerbox.style.flexGrow = '0';
+        leftbox.style.flexGrow = '0';
+        rightbox.style.flexGrow = '0';
+        leftbox.style.flexBasis = '300px'
+        rightbox.style.flexBasis = '300px'
+        centerbox.style.flexBasis = '150px'
+    }
+}
+function resetfunction() {
+    if (resetbutton.style.backgroundColor = 'dodgerblue'){
+        centerbox.style.flexShrink = '0';
+        leftbox.style.flexShrink = '0';
+        rightbox.style.flexShrink = '0';
+        shrinkbutton.style.backgroundColor = 'dodgerblue';
+        growbutton.style.backgroundColor = 'dodgerblue';
+        centerbox.style.flexGrow = '0';
+        leftbox.style.flexGrow = '0';
+        rightbox.style.flexGrow = '0';
+        leftbox.style.flexBasis = '100px'
+        rightbox.style.flexBasis = '100px'
+        centerbox.style.flexBasis = '100px'
+        
+    }
+}
+
+growbutton.addEventListener('click', growfunction)
+shrinkbutton.addEventListener('click', shrinkfunction)
+resetbutton.addEventListener('click', resetfunction)

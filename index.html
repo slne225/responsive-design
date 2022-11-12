@@ -14,7 +14,8 @@
         <ul>
             <a href="#flexvblock-header"><li>flex vs block</li></a>
             <a href="#inline-flex-header"><li>inline-flex</li></a>
-            <a href="#justify-content-header"><li>justify content</li></a>
+            <a href="#justify-content-header"><li>justify content/align items</li></a>
+            <a href="#shrink-and-grow"><li>shrink and grow</li></a>
         </ul>
     </nav>
     <br>
@@ -57,11 +58,11 @@
     <br>
     <br>
     <hr>
-    <h1 id="justify-content-header">justify-content</h1>
+    <h1 id="justify-content-header">justify-content and align-items</h1>
     <br>
     <br>
     <h3>justify-content</h3>
-    <div id="button-container">
+    <div id="justify-content-button-container">
         <button class="button justify-button" id="none">none</button>
         <button class="button justify-button" id="flex-start">flex start</button>
         <button class="button justify-button" id="flex-end">flex end</button>
@@ -70,7 +71,7 @@
         <button class="button justify-button" id="space-between">space between</button>
     </div>
     <h3>align-items</h3>
-    <div id="button-container">
+    <div id="align-items-button-container">
         <button class="button align-items" id="flex-start-align">flex start</button>
         <button class="button align-items" id="flex-end-align">flex end</button>
         <button class="button align-items" id="center-align">center</button>
@@ -82,7 +83,33 @@
       <div class='box middle'></div>
       <div class='box right'></div>
     </div>
+    <br>
+    <br>
+    <hr>
+    <h1 id="shrink-and-grow">flex shrink, grow and basis</h1>
+    <br>
+    <br>
+    <div>
 
+    <div>
+        <button class="button" id="shrink-button">shrink</button>
+        <button class="button" id="grow-button">grow</button>
+        <button class="button" id="reset">reset</button>
+    <br>
+    <br>
+    </div>
+    </div>
+    <div id='flex-adjust'>
+      <div class='box' id="grow-shrink-left">
+        <h2>1</h2>
+      </div>
+      <div class='box' id="grow-shrink-center">
+        <h2>2</h2>
+      </div>
+      <div class='box' id="grow-shrink-right">
+        <h2>3</h2>
+      </div>
+    </div>
     <script src="responsive.js"></script>
 </body>
 </html>
