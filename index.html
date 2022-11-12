@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>flexbox tutorial</h1>
+    <button id="top"><a href="#title">top</a></button>
+    <h1 id="title">flexbox tutorial</h1>
+    <nav>
+        <ul>
+            <a href="#flexvblock-header"><li>flex vs block</li></a>
+            <a href="#inline-flex-header"><li>inline-flex</li></a>
+            <a href="#justify-content-header"><li>justify content</li></a>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <hr>
+    <h1 id="flexvblock-header">flex vs block</h1>
     <br>
     <br>
     <button id="flexbutton" class="button">display: flex</button>
@@ -33,6 +45,10 @@
     </div>
     <br>
     <br>
+    <hr>
+    <h1 id="inline-flex-header">inline-flex</h1>
+    <br>
+    <br>
     <button class="button" id="inlinebutton">display: block</button>
     <div class="flex-container">
         <div class="inline-flex container"><h2>1</h2></div>
@@ -40,6 +56,11 @@
     </div>
     <br>
     <br>
+    <hr>
+    <h1 id="justify-content-header">justify-content</h1>
+    <br>
+    <br>
+    <h3>justify-content</h3>
     <div id="button-container">
         <button class="button justify-button" id="none">none</button>
         <button class="button justify-button" id="flex-start">flex start</button>
@@ -48,11 +69,20 @@
         <button class="button justify-button" id="space-around">space around</button>
         <button class="button justify-button" id="space-between">space between</button>
     </div>
-    <div class='container' id='justify-content-container'>
-      <div class='box'></div>
-      <div class='box'></div>
-      <div class='box'></div>
+    <h3>align-items</h3>
+    <div id="button-container">
+        <button class="button align-items" id="flex-start-align">flex start</button>
+        <button class="button align-items" id="flex-end-align">flex end</button>
+        <button class="button align-items" id="center-align">center</button>
+        <button class="button align-items" id="baseline">baseline</button>
+        <!-- <button class="button align-items" id="stretch">stretch</button> -->
     </div>
+    <div class='container' id='justify-content-container'>
+      <div class='box left'></div>
+      <div class='box middle'></div>
+      <div class='box right'></div>
+    </div>
+
     <script src="responsive.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@ body {
     color:white;
     background-color: black;
     margin: 0;
+
 }  
 h1 {
     font-size: 18px;
@@ -18,14 +19,14 @@ h2 {
 .container {
     background-color: darkgrey;
     margin: 20px;
-    height: 305px;
-    width: 300px;
+    height: 18.25rem;
+    width: 18rem ;
     box-shadow: 5px 5px 0 orange;
 }
 .box {
     background-color: dodgerblue;
-    height: 100px;
-    width: 100px;
+    min-height: 6rem;
+    width: 6rem;
     border: 1px solid orange;
     
 }
@@ -45,8 +46,39 @@ h2 {
     display: flex;
 }
 #justify-content-container {
-    display: flex;
+    display: block;
     justify-content: none;
-    height: 500px;
-    width: 100%;
+    align-items: none;
+    width: 75%;
 }
+hr {
+    width: 85%;
+}
+a {
+    color: white;
+}
+#top {
+    position: fixed;
+    background-color: dodgerblue;
+    color: white;
+    box-shadow: 2px 2px 0 orange;
+}
+@media screen and (max-width: 450px) {
+    .box {
+        height: 33px;
+        width: 33px;
+    }
+    .container {
+        height: 105px;
+        width: 100px;
+    }
+    .inline-flex {
+        height: 33px;
+        width: 33px;
+    }
+}
+.middle {
+    height: 100px;
+    width: 100px;
+    border: 5px solid turquoise;
+  }
