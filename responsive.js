@@ -34,6 +34,8 @@ function inlineFlexDisplay() {
 inlinebutton.addEventListener('click', inlineFlexDisplay)
 
 //justify content section
+
+// list of justify-content buttons by #id
 const none = document.getElementById('none');
 const flexstart = document.getElementById('flex-start');
 const flexend = document.getElementById('flex-end');
@@ -41,82 +43,51 @@ const center = document.getElementById('center');
 const spacearound = document.getElementById('space-around');
 const spacebetween = document.getElementById('space-between');
 const justifycontainer = document.getElementById('justify-content-container')
-const justifybutton = document.getElementsByClassName('justify-button')
+// const justifybutton = document.getElementsByClassName('justify-button')
+const justifyButtons = document.querySelectorAll('.justify-button');
+console.log(justifyButtons)
 
-// for (let i = 0; i < justifybutton.length; i++) {
-//     console.log(justifybutton[i].innerHTML)
-// }
-function nonefunction() {
-    if (justifycontainer.style.justifyContent !== 'none') {
-        justifycontainer.style.display = 'block'
-        justifycontainer.style.justifyContent = 'none'
-        none.style.backgroundColor = 'orange'
-        flexstart.style.backgroundColor = 'dodgerblue'
-        flexend.style.backgroundColor = 'dodgerblue'
-        center.style.backgroundColor = 'dodgerblue'
-        spacearound.style.backgroundColor = 'dodgerblue'
-        spacebetween.style.backgroundColor = 'dodgerblue'
+//resets background color of class .justify-content and sets display to flex
+function resetJustifyBackgroundColor() {
+    for (let i = 0; i < justifyButtons.length; i++){
+    justifyButtons[i].style.backgroundColor = 'dodgerblue'
     }
+    justifycontainer.style.display = 'flex'
+}
+
+//refactor using control flow
+//highlight selected buttons and change justify-content property
+function nonefunction() {
+    resetJustifyBackgroundColor();
+    none.style.backgroundColor = 'orange'
+    justifycontainer.style.display = 'block'
+    justifycontainer.style.justifyContent = 'none'
 }
 function flexstartfunction() {
-    if (justifycontainer.style.justifyContent !== 'flex-start') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.justifyContent = 'flex-start'
-        none.style.backgroundColor = 'dodgerblue'
-        flexstart.style.backgroundColor = 'orange'
-        flexend.style.backgroundColor = 'dodgerblue'
-        center.style.backgroundColor = 'dodgerblue'
-        spacearound.style.backgroundColor = 'dodgerblue'
-        spacebetween.style.backgroundColor = 'dodgerblue'
-    }
+    resetJustifyBackgroundColor();
+    flexstart.style.backgroundColor = 'orange'
+    justifycontainer.style.justifyContent = 'flex-start'
 }
 function flexendfunction() {
-    if (justifycontainer.style.justifyContent !== 'flex-end') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.justifyContent = 'flex-end'
-        none.style.backgroundColor = 'dodgerblue'
-        flexstart.style.backgroundColor = 'dodgerblue'
-        flexend.style.backgroundColor = 'orange'
-        center.style.backgroundColor = 'dodgerblue'
-        spacearound.style.backgroundColor = 'dodgerblue'
-        spacebetween.style.backgroundColor = 'dodgerblue'
-    }
+    resetJustifyBackgroundColor();
+    flexend.style.backgroundColor = 'orange'
+    justifycontainer.style.justifyContent = 'flex-end'
 }
 function centerfunction() {
-    if (justifycontainer.style.justifyContent !== 'center') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.justifyContent = 'center'
-        none.style.backgroundColor = 'dodgerblue'
-        flexstart.style.backgroundColor = 'dodgerblue'
-        flexend.style.backgroundColor = 'dodgerblue'
-        center.style.backgroundColor = 'orange'
-        spacearound.style.backgroundColor = 'dodgerblue'
-        spacebetween.style.backgroundColor = 'dodgerblue'
-    }
+    resetJustifyBackgroundColor();
+    center.style.backgroundColor = 'orange'
+    justifycontainer.style.justifyContent = 'center'
 }
 function spacearoundfunction() {
-    if (justifycontainer.style.justifyContent !== 'space-around') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.justifyContent = 'space-around'
-        none.style.backgroundColor = 'dodgerblue'
-        flexstart.style.backgroundColor = 'dodgerblue'
-        flexend.style.backgroundColor = 'dodgerblue'
-        center.style.backgroundColor = 'dodgerblue'
-        spacearound.style.backgroundColor = 'orange'
-        spacebetween.style.backgroundColor = 'dodgerblue'
-    }
+    resetJustifyBackgroundColor();
+    spacearound.style.backgroundColor = 'orange'
+    justifycontainer.style.justifyContent = 'space-around'
 }
 function spacebetweenfunction() {
-    if (justifycontainer.style.justifyContent !== 'space-between') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.justifyContent = 'space-between'
-        none.style.backgroundColor = 'dodgerblue'
-        flexstart.style.backgroundColor = 'dodgerblue'
-        flexend.style.backgroundColor = 'dodgerblue'
-        center.style.backgroundColor = 'dodgerblue'
-        spacearound.style.backgroundColor = 'dodgerblue'
-        spacebetween.style.backgroundColor = 'orange'
-    }
+    resetJustifyBackgroundColor();
+    spacebetween.style.backgroundColor = 'orange';
+    justifycontainer.style.justifyContent = 'space-between'
+
 }
 none.addEventListener('click', nonefunction);
 flexstart.addEventListener('click', flexstartfunction);
@@ -125,51 +96,41 @@ center.addEventListener('click', centerfunction);
 spacearound.addEventListener('click', spacearoundfunction);
 spacebetween.addEventListener('click', spacebetweenfunction);
 
+
+
 //align items section
 const flexstartalign = document.getElementById('flex-start-align');
 const flexendalign = document.getElementById('flex-end-align');
 const centeralign = document.getElementById('center-align');
 const baseline = document.getElementById('baseline');
+const classAlign = document.querySelectorAll('.align-items');
+
+function resetAlignBackgroundColor() {
+    for (let i = 0; i < classAlign.length; i++){
+    classAlign[i].style.backgroundColor = 'dodgerblue'
+    }
+    justifycontainer.style.display = 'flex'
+}
 
 function flexstartalignfunction() {
-    if (justifycontainer.style.alignItems !== 'flex-start') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.alignItems = 'flex-start'
-        flexstartalign.style.backgroundColor = 'orange'
-        flexendalign.style.backgroundColor = 'dodgerblue'
-        centeralign.style.backgroundColor = 'dodgerblue'
-        baseline.style.backgroundColor = 'dodgerblue'
-    }
+    resetAlignBackgroundColor();
+    flexstartalign.style.backgroundColor = 'orange';
+    justifycontainer.style.alignItems = 'flex-start';
 }
 function flexendalignfunction() {
-    if (justifycontainer.style.alignItems !== 'flex-end') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.alignItems = 'flex-end'
-        flexstartalign.style.backgroundColor = 'dodgerblue'
-        flexendalign.style.backgroundColor = 'orange'
-        centeralign.style.backgroundColor = 'dodgerblue'
-        baseline.style.backgroundColor = 'dodgerblue'
-    }
+    resetAlignBackgroundColor();
+    flexendalign.style.backgroundColor = 'orange';
+    justifycontainer.style.alignItems = 'flex-end';
 }
 function flexcenteralignfunction() {
-    if (justifycontainer.style.alignItems !== 'center') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.alignItems = 'center'
-        flexstartalign.style.backgroundColor = 'dodgerblue'
-        flexendalign.style.backgroundColor = 'dodgerblue'
-        centeralign.style.backgroundColor = 'orange'
-        baseline.style.backgroundColor = 'dodgerblue'
-    }
+    resetAlignBackgroundColor();
+    centeralign.style.backgroundColor = 'orange';
+    justifycontainer.style.alignItems = 'center';
 }
 function baselinefunction() {
-    if (justifycontainer.style.alignItems !== 'baseline') {
-        justifycontainer.style.display = 'flex'
-        justifycontainer.style.alignItems = 'baseline'
-        flexstartalign.style.backgroundColor = 'dodgerblue'
-        flexendalign.style.backgroundColor = 'dodgerblue'
-        centeralign.style.backgroundColor = 'dodgerblue'
-        baseline.style.backgroundColor = 'orange'
-    }
+    resetAlignBackgroundColor();
+    baseline.style.backgroundColor = 'orange';
+    justifycontainer.style.alignItems = 'baseline';
 }
 
 flexstartalign.addEventListener('click', flexstartalignfunction)
